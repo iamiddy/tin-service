@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="dev-apps:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="tin-service.war">
+      <element id="artifact" artifact-name="dev-apps:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.iddymagohe.tin"/>
+    <mvc:resources mapping="/docs/**" location="/public/docs/"/>
+
+    <!-- If you're using Spring HATEOAS as well register this one *instead* of the former -->
+    <bean class="org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration" />
+
+    <bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="conversionService"
+          class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.iddymagohe.tin.rest.dto.BusinessEntryConverter"/>
+            </set>
+        </property>
+    </bean>
+
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<util:list id="beanList">-->
+                <!--<ref bean="stringHttpMessageConverter"/>-->
+                <!--<ref bean="marshallingHttpMessageConverter"/>-->
+            <!--</util:list>-->
+        <!--</property-->
+    <!--</bean>-->
+
+    <!--<bean id="stringHttpMessageConverter"-->
+          <!--class="org.springframework.http.converter.StringHttpMessageConverter"/>-->
+
+    <!--<bean id="marshallingHttpMessageConverter"-->
+          <!--class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">-->
+        <!--<property name="marshaller" ref="jaxb2Marshaller" />-->
+        <!--<property name="unmarshaller" ref="castorMarshaller" />-->
+    <!--</bean>-->
+
+    <!--<bean id="jaxb2Marshaller" class="org.springframework.oxm.castor.CastorMarshaller"/>-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>-->
+
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>-->
+
+
+    <mvc:annotation-driven/><!-- Required so swagger-springmvc can access spring's RequestMappingHandlerMapping  -->
+    <bean class="org.springframework.data.web.config.HateoasAwareSpringDataWebConfiguration" />
+    <bean class="com.iddymagohe.tin.rest.util.APIDocumentationConfiguration" />
+
+
+
+</beans>
