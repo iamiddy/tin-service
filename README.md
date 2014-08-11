@@ -1,7 +1,7 @@
 tin-service API
 ===========
-Tanzania Business (taxpayers) verification/look up services by TINv-vNumber intended for software/applications consumptions.
-This Service exposes a set Rest endpoint indicated below .
+Tanzania Businesses (taxpayers) verification/look up services by TINv-Number intended for software/applications consumptions.
+The Service exposes a set Rest endpoint as indicated below .
 
 ![screenshot](tin-xls/swagger.png)
 
