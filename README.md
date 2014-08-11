@@ -18,7 +18,7 @@ This Service exposes a set Rest endpoint indicated below .
 ## USAGE
 You will need a running instance of MongoDB
 Change the following line  in application-context.xml accordingly 
-<code> <mongo:db-factory id="mongoDbFactory" dbname="b-directory"  /> </code> <br/>
+<tt> <mongo:db-factory id="mongoDbFactory" dbname="b-directory"  /> </tt> <br/>
 You can then deploy a war or use the embedded  tomcat7 plugin  through Maven .
 
 On any browser point to the Swagger API documentation @http://localhost:8080/tin-service/docs/index.html
