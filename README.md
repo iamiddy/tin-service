@@ -24,7 +24,7 @@ You can then deploy a war or use the embedded  tomcat7 plugin  through Maven .
 On any browser point to the Swagger API documentation @http://localhost:8080/tin-service/docs/index.html
 Use the POST option to register as many business as you want or use the onetime load option explained below
 
-## Loading sample data ,onetime load (option)
+## Loading sample data ,onetime load (option)  
 Have included sample data folder 'tin-xls', into mongoDB
 Check this line in application-context.xml is uncommented <code><context:component-scan base-package="com.iddymagohe.tin"/> </code> <br/>
 Only needed for this purpose, comment it back after loading the data
