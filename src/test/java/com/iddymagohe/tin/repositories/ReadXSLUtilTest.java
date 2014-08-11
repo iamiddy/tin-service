@@ -14,8 +14,8 @@ import static org.junit.Assert.*;
  * Created by iddymagohe on 8/9/14.
  */
 
-//@RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(locations = { "classpath:spring/application-context.xml"})
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { "classpath:spring/application-context.xml"})
 public class ReadXSLUtilTest {
 
     public static final String TIN_REGEX= "^[0-9-]{9,11}$";
