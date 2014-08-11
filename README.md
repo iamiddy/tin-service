@@ -6,25 +6,25 @@ This Service exposes a set Rest endpoint indicated below .
 ![screenshot](tin-xls/swagger.png)
 
 # Technologies
-# 1.Maven
-# 2.Java 1.7
-# 3.Spring core 
-# 4.SpringMVC
-# 5.Spring HATEOAS 
-# 6.SpringData Mongo
-# 7.Mongo DB
+### 1.Maven
+### 2.Java 1.7
+### 3.Spring core 
+### 4.SpringMVC
+### 5.Spring HATEOAS 
+### 6.SpringData Mongo
+### 7.Mongo DB
 
 
 ## USAGE
 You will need a running instance of MongoDB
-Change the following line  in application-context.xml accordingly <br/>
-<code><mongo:db-factory id="mongoDbFactory" dbname="b-directory"  /> </code> <br/>
+Change the following line  in application-context.xml accordingly 
+<code> <mongo:db-factory id="mongoDbFactory" dbname="b-directory"  /> </code> <br/>
 You can then deploy a war or use the embedded  tomcat7 plugin  through Maven .
 
 On any browser point to the Swagger API documentation @http://localhost:8080/tin-service/docs/index.html
 Use the POST option to register as many business as you want or use the onetime load option explained below
 
-# Loading sample data ,onetime load (option)
+## Loading sample data ,onetime load (option)
 Have included sample data folder 'tin-xls', into mongoDB
 Check this line in application-context.xml is uncommented <code><context:component-scan base-package="com.iddymagohe.tin"/> </code> <br/>
 Only needed for this purpose, comment it back after loading the data
